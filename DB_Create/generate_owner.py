@@ -83,7 +83,7 @@ def create_owner_file():
     ws.column_dimensions['E'].width = 12
     
     os.makedirs('report', exist_ok=True) 
-    output_path = 'report/Owner.xlsx'
+    output_path = 'report/XLSX/Owner.xlsx'
     wb.save(output_path)
     print(f"✓ Owner.xlsx created with {len(owners)} owners")
     return output_path

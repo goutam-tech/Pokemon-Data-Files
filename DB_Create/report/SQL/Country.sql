@@ -1,0 +1,15 @@
+INSERT INTO country (Id, Name) VALUES (1, 'Japan');
+INSERT INTO country (Id, Name) VALUES (2, 'United States');
+INSERT INTO country (Id, Name) VALUES (3, 'United Kingdom');
+INSERT INTO country (Id, Name) VALUES (4, 'France');
+INSERT INTO country (Id, Name) VALUES (5, 'Germany');
+INSERT INTO country (Id, Name) VALUES (6, 'Italy');
+INSERT INTO country (Id, Name) VALUES (7, 'Spain');
+INSERT INTO country (Id, Name) VALUES (8, 'Canada');
+INSERT INTO country (Id, Name) VALUES (9, 'Australia');
+INSERT INTO country (Id, Name) VALUES (10, 'Brazil');
+INSERT INTO country (Id, Name) VALUES (11, 'South Korea');
+INSERT INTO country (Id, Name) VALUES (12, 'China');
+INSERT INTO country (Id, Name) VALUES (13, 'India');
+INSERT INTO country (Id, Name) VALUES (14, 'Mexico');
+INSERT INTO country (Id, Name) VALUES (15, 'Netherlands');

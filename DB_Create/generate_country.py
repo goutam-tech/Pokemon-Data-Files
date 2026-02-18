@@ -45,7 +45,7 @@ def create_country_file():
     ws.column_dimensions['B'].width = 25
     
     os.makedirs('report', exist_ok=True)
-    output_path = 'report/Country.xlsx'
+    output_path = 'report/XLSX/Country.xlsx'
     wb.save(output_path)
     print(f"✓ Country.xlsx created with {len(countries)} countries")
     return output_path

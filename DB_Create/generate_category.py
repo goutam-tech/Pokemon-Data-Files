@@ -48,7 +48,7 @@ def create_category_file():
     ws.column_dimensions['B'].width = 20
     
     os.makedirs('report', exist_ok=True) 
-    output_path = 'report/Category.xlsx'
+    output_path = 'report/XLSX/Category.xlsx'
     wb.save(output_path)
     print(f"✓ Category.xlsx created with {len(categories)} categories")
     return output_path
