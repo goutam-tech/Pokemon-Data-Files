@@ -2,6 +2,11 @@
 
 A Python project for generating structured Pokémon datasets and populating PostgreSQL databases. Exports data to Excel, CSV, and SQL formats using Pandas, making it ideal for data analysis, visualization, and database management.
 
+<p align="center">
+
+  ![Offline](https://img.shields.io/badge/PokeAPI-v2-yellowgreen)  ![Python](https://img.shields.io/badge/Python-3-red)  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)  ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green)  ![Pillow](https://img.shields.io/badge/Pillow-Image%20Processing-yellow)
+</p>
+
 ---
 
 ## Table of Contents
@@ -81,7 +86,7 @@ Pokemon-Data-Files/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/Pokemon-Data-Files.git
+git clone <YOUR_DATA_REPO_URL>
 cd Pokemon-Data-Files
 
 # Install dependencies
@@ -129,6 +134,45 @@ Ensure your CSV files exist in `DB_Create/report/CSV/` and paths in `.env` are c
 
 ---
 
+### *Download the images of Pokemon:*
+
+### Scrape Image URLs from Bulbapedia using the scripts:
+
+**Just clone the repo or just download the `src` files.**
+
+```
+# Install Required Libraries first
+python -m pip install requests
+python -m pip install beautifulsoup4
+```
+<br>
+
+**1. Fetch Image URLs using this script:**
+
+**`src/imageDownloader/ImageScrapper.py`**
+
+This script fetches all base form URLs to `URLs/URLs.txt` and the logs the failed attempts to `ImageScrapperFailedList.txt`
+
+Note: `ImageScrapperFailedList.txt` Contains all the failed names which could't be fetched due to exceptional naming in their page names like Mr. Mime's
+https://bulbapedia.bulbagarden.net/wiki/File:122Mr._Mime.png
+
+<br>
+
+**2. Downloading the Images from URLs.txt:**
+
+**`src/imageDownloader/Downloader.py`**
+
+Use this script for Downloading images using the URLs.txt to `downloads/id.png`
+(Optional parameter `ReDownloadOnlyCorruptedFiles` to redownload only new/ corrupted files)
+
+Note: `ExceptionalURLs.txt` and `FormURLs.txt` have been manually created, use any download manager to download using them.<br>
+
+
+## C. Generating the DataSet from PokeAPI:
+ 1. Just clone the repo or download just the `src` files.
+ 1. Run `src/dataSet/generateDataSet.py` to generate the dataset.
+ Note: `.csv` files are directly from the [Veekun](https://github.com/veekun/pokedex/tree/master/pokedex/data/csv) database.
+
 ## Environment Variables
 
 | Variable | Description | Example |
@@ -158,10 +202,14 @@ Full list and descriptions are in [`.env.example`](.env.example).
 
 ---
 
-## License
+## License 
 
-This project is licensed under the terms of the [LICENSE](LICENSE) file.
+This project is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/legalcode).
 
 ---
 
-*Built with* Python · PostgreSQL · Pandas *and lots of love* ❤️‍🔥💜
+# Copyright Notice
+Please note everything in this repository is copyrighted by the Pokémon Company and its affiliates. This repository is merely a compilation of data collected by the editors of Bulbapedia and Data from Veekun and PokeAPI.
+
+
+*Built with* Python · PostgreSQL · Pandas · Pillow *and lots of love* ❤️‍🔥💜

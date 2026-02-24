@@ -86,7 +86,6 @@ with open(csv_file_path_owners, newline="") as csvfile:
         )
 
 # Pokemon Data;
-# csv_file_path = os.path.join("C:\\Users\\gevil\\OneDrive\\Desktop\\Data_Filter\\Pokemon-Data-Files\\DB_Create\\report\\CSV", "Pokemon.csv")
 csv_file_path_pokemon = os.getenv("CSV_PATH_POKEMON")
 with open(csv_file_path_pokemon, newline="") as csvfile: 
     reader = csv.DictReader(csvfile) 
